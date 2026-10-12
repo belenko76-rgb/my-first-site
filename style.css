@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    background-color:#eaf4ff;
+}
+
+.card {
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+
+    background-color: white;
+    text-align: center;
+
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    margin-top: 0;
+    color: #222;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #6f42c1;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #005ea6;
+    transform: translateY(-2px);
+}
+.dark {
+    background-color: #1e1e1e;
+}
+
+.dark .card {
+    background-color: #2b2b2b;
+}
+
+.dark h1 {
+    color: white;
+}
+
+.dark p {
+    color: #cccccc;
+}
+.subtitle {
+    font-weight: bold;
+    color: #6f42c1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.buttons a {
+    text-decoration: none;
+    background-color: #eeeeee;
+    color: #222;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.buttons a:hover {
+    transform: translateY(-2px);
+    background-color: #dddddd;
+}
+
+.dark .buttons a {
+    background-color: #444;
+    color: white;
+}
+.avatar {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 28px 20px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons a,
+    #themeButton {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+}
